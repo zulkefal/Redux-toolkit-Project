@@ -2,10 +2,13 @@ import React from 'react'
 import DeleteAllUsers from './DeleteAllUsers'
 import './UserDetail.css'
 import { fakeUserData } from '../api'
+import { useDispatch } from 'react-redux'
+import {addUser} from '../store/slices/UsersSlice'
+
 const UserDetails = () => {
-
-  const addNewUser=()=>{
-
+  const dispatch=useDispatch();
+  const addNewUser=(name)=>{
+    dispatch(addUser(name))
   }
   return (
     <div className='content'>
