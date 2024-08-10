@@ -4,6 +4,8 @@ import './UserDetail.css'
 import { fakeUserData } from '../api'
 import { useDispatch } from 'react-redux'
 import {addUser} from '../store/slices/UsersSlice'
+import DisplayUsers from './DisplayUsers'
+
 
 const UserDetails = () => {
   const dispatch=useDispatch();
@@ -20,16 +22,9 @@ const UserDetails = () => {
         </div>
         <div className="allTasks">
         <ul className='task'>
-        <li >Hi</li>
-        <button className='taskButton'>Delete</button>
-        </ul>
-        <ul className='task'>
-        <li >Hi</li>
-        <button className='taskButton'>Delete</button>
-
-        </ul>
-        <ul className='task'>
-            <li >Hi</li>
+            <li >
+              <DisplayUsers/>
+            </li>
             <button className='taskButton'>Delete</button>
 
         </ul>
