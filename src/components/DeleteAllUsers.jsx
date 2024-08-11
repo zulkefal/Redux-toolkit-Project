@@ -1,9 +1,11 @@
 import React from 'react'
-
+import './Navbar.css'
 const DeleteAllUsers = () => {
   return (
     <div>
-      <h5>Delete All Users</h5>
+      <button className='deleteAllButton'>
+        Delete All Users
+      </button>
     </div>
   )
 }

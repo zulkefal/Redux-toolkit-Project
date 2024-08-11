@@ -23,3 +23,18 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.deleteAllButton{
+    margin-left: 68%;
+    padding: 1%;
+    margin-top: 1%;
+    font-size: 1.2rem;
+    border-radius: 10%;
+}
+.deleteAllButton:hover{
+    background-color: #802b2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
