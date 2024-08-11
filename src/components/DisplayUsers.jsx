@@ -5,9 +5,11 @@ import { removeUser } from "../store/slices/UsersSlice";
 const DisplayUsers = () => {
   const data = useSelector((state) => state.user.users || []);
   const dispatch = useDispatch();
-  const deleteSelected = (e) => {
-    console.log(e.target.previousSibling)
+  const deleteSelected = (id) => {
+    // console.log(e.target.previousSibling)
     // dispatch(removeUser(e.target.previousSibling.textContent))
+    dispatch(removeUser(id))
+
   }
    
    return (
@@ -17,7 +19,7 @@ const DisplayUsers = () => {
          <li key={index}>
            {user}
          </li>
-         <button className='taskButton' onClick={(e)=>deleteSelected(e)}>Delete</button>
+         <button className='taskButton' onClick={()=>deleteSelected(index)}>Delete</button>
 
         </div>
          
